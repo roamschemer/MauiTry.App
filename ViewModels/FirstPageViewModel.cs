@@ -5,12 +5,10 @@ using Reactive.Bindings.Extensions;
 
 namespace MauiTry.ViewModels
 {
-    internal class FirstPageViewModel
-    {
+    public class FirstPageViewModel : BindableBase {
         public ReactiveProperty<string> Name { get; }
         public ReactiveCommand LotteryCommand { get; }
-
-        public FirstPageViewModel(INavigation navigation, Person person)
+        public FirstPageViewModel(Person person)
         {
             this.Name = person.ObserveProperty(x => x.Name).ToReactiveProperty();
             LotteryCommand = new ReactiveCommand();

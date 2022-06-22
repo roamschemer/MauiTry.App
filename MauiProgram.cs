@@ -1,4 +1,6 @@
 ﻿using MauiTry.Models;
+using MauiTry.ViewModels;
+using MauiTry.Views;
 
 namespace MauiTry;
 
@@ -14,7 +16,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-		builder.Services.AddTransient<Person>();
-		return builder.Build();
+        builder.Services.AddTransient<FirstPageView>();
+        builder.Services.AddTransient<FirstPageViewModel>();
+        builder.Services.AddTransient<Person>();
+        return builder.Build();
 	}
 }

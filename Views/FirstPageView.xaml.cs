@@ -5,9 +5,9 @@ namespace MauiTry.Views;
 
 public partial class FirstPageView : ContentPage
 {
-	public FirstPageView(Person person)
+	public FirstPageView(FirstPageViewModel viewModel)
 	{
 		InitializeComponent();
-        BindingContext = new FirstPageViewModel(this.Navigation, person);
+        BindingContext = viewModel;
     }
 }
