@@ -5,9 +5,9 @@ namespace MauiTry;
 
 public partial class App : Application
 {
-	public App(FirstPageView pageView)
+	public App(FirstPage pageView)
 	{
 		InitializeComponent();
-		MainPage = pageView;
+		MainPage = new NavigationPage(pageView);
 	}
 }

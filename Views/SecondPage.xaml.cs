@@ -1,11 +1,10 @@
-using MauiTry.Models;
 using MauiTry.ViewModels;
 
 namespace MauiTry.Views;
 
-public partial class FirstPageView : ContentPage
+public partial class SecondPage : ContentPage
 {
-	public FirstPageView(FirstPageViewModel viewModel)
+	public SecondPage(SecondPageViewModel viewModel)
 	{
 		InitializeComponent();
         BindingContext = viewModel;
