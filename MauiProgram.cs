@@ -1,4 +1,5 @@
 ﻿using MauiTry.Models;
+using MauiTry.Services;
 using MauiTry.ViewModels;
 using MauiTry.Views;
 
@@ -16,9 +17,14 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-        builder.Services.AddTransient<FirstPageView>();
+
+        builder.Services.AddTransient<FirstPage>();
         builder.Services.AddTransient<FirstPageViewModel>();
+        builder.Services.AddTransient<SecondPage>();
+        builder.Services.AddTransient<SecondPageViewModel>();
         builder.Services.AddTransient<Person>();
+        builder.Services.AddTransient<SecondPageViewModel>();
+        builder.Services.AddSingleton<INavigationService, NavigationService>();
         return builder.Build();
 	}
 }
