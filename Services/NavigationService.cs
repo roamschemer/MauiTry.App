@@ -33,7 +33,8 @@ namespace MauiTry.Services {
 
         private Task NavigateToPage<T>() where T : Page {
             var page = ResolvePage<T>();
-            if (page is not null) return Navigation.PushAsync(page, true);
+            if (page is not null)
+                return Navigation.PushAsync(page, true);
             throw new InvalidOperationException($"Unable to resolve type {typeof(T).FullName}");
         }
 
