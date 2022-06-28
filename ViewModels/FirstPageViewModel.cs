@@ -7,13 +7,13 @@ using Reactive.Bindings.Extensions;
 namespace MauiTry.ViewModels
 {
     public class FirstPageViewModel {
-        public ReactiveProperty<string> Name { get; }
+        public ReactiveProperty<Person> Person { get; }
         public ReactiveCommand LotteryCommand { get; }
         public ReactiveCommand NextPageNavigationCommand { get; }
-        public FirstPageViewModel(INavigationService navigationService, Person person) {
-            this.Name = person.ObserveProperty(x => x.Name).ToReactiveProperty();
+        public FirstPageViewModel(INavigationService navigationService, Lottery lottery) {
+            this.Person = lottery.ObserveProperty(x => x.Person).ToReactiveProperty();
             LotteryCommand = new ReactiveCommand();
-            LotteryCommand.Subscribe(_ => person.Lottery());
+            LotteryCommand.Subscribe(_ => lottery.Execution());
             NextPageNavigationCommand = new ReactiveCommand();
             NextPageNavigationCommand.Subscribe(async _ => await navigationService.NavigateToSecondPage());
         }

@@ -22,9 +22,11 @@ public static class MauiProgram
         builder.Services.AddTransient<FirstPageViewModel>();
         builder.Services.AddTransient<SecondPage>();
         builder.Services.AddTransient<SecondPageViewModel>();
-        builder.Services.AddTransient<Person>();
+        builder.Services.AddTransient<Lottery>();
         builder.Services.AddTransient<SecondPageViewModel>();
         builder.Services.AddSingleton<INavigationService, NavigationService>();
+        builder.Services.AddSingleton<IDataService, DataService>();
+
         return builder.Build();
 	}
 }

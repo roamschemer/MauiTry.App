@@ -1,4 +1,5 @@
 ﻿using MauiTry.Extends;
+using MauiTry.Services;
 
 namespace MauiTry.Models
 {
@@ -11,13 +12,10 @@ namespace MauiTry.Models
         }
         private string _name;
 
-        private readonly string[] _nameList = new string[] { "放浪軍師", "夏狂乱", "赤猫お夏", "太照天昼子", "淀ノ蛇麻呂" };
-
-        public void Lottery()
-        {
-            var rnd = new Random((int)DateTime.Now.Ticks & 0x0000FFFF);
-            var index = rnd.Next(0, _nameList.Length);
-            Name = _nameList[index];
+        public string Job {
+            get => _job;
+            set => SetProperty(ref _job, value);
         }
+        private string _job;
     }
 }
