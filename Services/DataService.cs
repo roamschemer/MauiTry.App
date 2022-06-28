@@ -16,9 +16,9 @@ namespace MauiTry.Services {
             new() {
                 new () { Name = "放浪軍師", Job = "エンジニア"},
                 new () { Name = "夏狂乱", Job = "VAppler"},
-                new () { Name = "赤猫お夏", Job = "神"},
-                new () { Name = "太照天昼子", Job = "神"},
-                new () { Name = "淀ノ蛇麻呂", Job = "神"},
+                new () { Name = "赤猫お夏", Job = "火神"},
+                new () { Name = "太照天昼子", Job = "火神"},
+                new () { Name = "淀ノ蛇麻呂", Job = "水神"},
             };
     }
 }

@@ -8,8 +8,8 @@
     <Label Text="{Binding Person.Value.Job}" />
     <Button Command="{Binding LotteryCommand}" Text="抽選!!" />
     <Image
-      Source="ran.png"
-      WidthRequest="240"
+      Source="rancyan_minikowashiya.png"
+      HeightRequest="200"
       HorizontalOptions="Center" />
     <Button Command="{Binding NextPageNavigationCommand}" Text="Next Page!!" />
   </VerticalStackLayout>
