@@ -1,4 +1,3 @@
-using MauiTry.Models;
 using MauiTry.ViewModels;
 
 namespace MauiTry.Views;

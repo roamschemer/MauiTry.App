@@ -1,5 +1,4 @@
-﻿using MauiTry.Extends;
-using MauiTry.Models;
+﻿using MauiTry.Models;
 using MauiTry.Services;
 using Reactive.Bindings;
 using Reactive.Bindings.Extensions;

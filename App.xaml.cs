@@ -1,5 +1,4 @@
 ﻿using MauiTry.Views;
-using MauiTry.Models;
 
 namespace MauiTry;
 
