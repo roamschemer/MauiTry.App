@@ -6,6 +6,7 @@ namespace MauiTry.Services {
         public List<Person> ReadPersons();
     }
 
+    //データクラス。本来ならデータベースとかファイルとかAPIとかから取得になるが今回は面倒なので直書き。
     public class DataService : IDataService {
         public List<Person> ReadPersons() => 
             new() {

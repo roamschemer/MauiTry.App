@@ -8,17 +8,19 @@ namespace MauiTry.Models {
 
         public Person Person {
             get => _person;
-            set => SetProperty(ref _person, value);
+            set => SetProperty(ref _person, value); //変更通知
         }
         private Person _person;
 
+        //使用するクラスを外部から渡す(Dependency Injection)
         public Lottery(IDataService dataService) => _dataService = dataService;
 
+        //抽選するロジック
         public void Execution() {
             var rnd = new Random((int)DateTime.Now.Ticks & 0x0000FFFF);
-            var persons = _dataService.ReadPersons();
-            var index = rnd.Next(0, persons.Count);
-            Person = persons[index];
+            var persons = _dataService.ReadPersons(); //人物リストを取得
+            var index = rnd.Next(0, persons.Count); //ランダムで抽選
+            Person = persons[index]; //プロパティに代入
         }
     }
 }

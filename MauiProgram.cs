@@ -18,6 +18,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+		//Dependensy Injection Container (DIContainer) はここで指定。
+		//コンストラクタから自動で呼び出せるようになる。任意に呼ぶことも可能。
         builder.Services.AddTransient<FirstPage>();
         builder.Services.AddTransient<FirstPageViewModel>();
         builder.Services.AddTransient<SecondPage>();

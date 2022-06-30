@@ -4,9 +4,10 @@ namespace MauiTry.Views;
 
 public partial class FirstPage : ContentPage
 {
-	public FirstPage(FirstPageViewModel viewModel)
+    //使用するクラスを外部から渡す(Dependency Injection)
+    public FirstPage(FirstPageViewModel viewModel)
 	{
 		InitializeComponent();
-        BindingContext = viewModel;
+        BindingContext = viewModel; //ViewModel を割り当てる
     }
 }
