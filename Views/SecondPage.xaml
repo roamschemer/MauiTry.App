@@ -8,6 +8,7 @@
             Text="SecondPage!!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+    <!-- ViewModelのコマンドとバインディング-->
     <Button Command="{Binding NavigateBackCommand}" Text="Back Page!!" />
   </VerticalStackLayout>
 </ContentPage>

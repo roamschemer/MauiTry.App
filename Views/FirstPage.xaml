@@ -4,13 +4,17 @@
              x:Class="MauiTry.Views.FirstPage"
              Title="FirstPageView">
   <VerticalStackLayout>
+    <!-- ViewModelのプロパティとバインディングさせる。ReactiveProperty を使用する際は .Value を付ける-->
     <Label Text="{Binding Person.Value.Name}" />
     <Label Text="{Binding Person.Value.Job}" />
+    <!-- ViewModelのコマンドとバインディング。ReactiveCommand は .Value は不要-->
     <Button Command="{Binding LotteryCommand}" Text="抽選!!" />
+    <!-- 画像ファイルは Resources/Images に配置するだけでよい -->
     <Image
       Source="rancyan_minikowashiya.png"
       HeightRequest="200"
       HorizontalOptions="Center" />
+    <!-- ViewModelのコマンドとバインディング-->
     <Button Command="{Binding NextPageNavigationCommand}" Text="Next Page!!" />
   </VerticalStackLayout>
 </ContentPage>
