@@ -1,7 +1,4 @@
-﻿using MauiTry.Extends;
-using MauiTry.Services;
-
-namespace MauiTry.Models
+﻿namespace MauiTry.Models
 {
     public class Person
     {
